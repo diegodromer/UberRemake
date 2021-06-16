@@ -137,6 +137,7 @@ class DriverHomeActivity : AppCompatActivity() {
     }
 
     private fun showDialogUpload() {
+        var mock: Double = 0.0
         val builder = AlertDialog.Builder(this@DriverHomeActivity)
         builder.setTitle("Mudar avatar")
             .setMessage("Você realmente deseja mudar avatar?")
@@ -151,6 +152,7 @@ class DriverHomeActivity : AppCompatActivity() {
                     avatarFolder.putFile(imageUri!!)
                         .addOnFailureListener{e ->
                             Snackbar.make(drawerLayout, e.message!!, Snackbar.LENGTH_LONG).show()
+                            waitingDialog.dismiss()
                         }.addOnCompleteListener{task ->
                             if(task.isSuccessful){
                                 avatarFolder.downloadUrl.addOnSuccessListener { uri ->
@@ -161,10 +163,15 @@ class DriverHomeActivity : AppCompatActivity() {
 
                                 }
                             }
+                            if(mock == 100.0) {
+                                waitingDialog.dismiss()
+                            }
                         }.addOnProgressListener{taskSnapshot ->
                             val progress = (100.0*taskSnapshot.bytesTransferred / taskSnapshot.totalByteCount)
                             waitingDialog.setMessage(StringBuilder("Enviando: ").append(progress).append("%"))
+                            mock = progress
                         }
+
                 }
             }.setCancelable(false)
 
