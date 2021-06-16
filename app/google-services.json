@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "593587097558",
+    "project_id": "uber2021-eeacf",
+    "storage_bucket": "uber2021-eeacf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:593587097558:android:22eed006852b20e4ec5e77",
+        "android_client_info": {
+          "package_name": "com.diegolima.uberremake"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "593587097558-q5rvo9dalg6p9th8a1ik7e5vto8bnoec.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKLOhF9JQinXxojccnsExD_4Vxt_YnhU0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "593587097558-q5rvo9dalg6p9th8a1ik7e5vto8bnoec.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
